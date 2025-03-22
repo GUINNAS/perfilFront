@@ -7,23 +7,23 @@
 }
 
 :root {
-    --cor-primaria: #3498db;
-    --cor-secundaria: #f1c40f;
+    --cor-header: rgb(36, 36, 36);
+    --cor-footer: #f1c40f;
     --cor-fundo: #f9f9f9;
     --cor-texto: #333;
 }
 
 .light {
-  --cor-primaria: #3498db;
-  --cor-secundaria: #f1c40f;
+  --cor-header: rgb(36, 36, 36);
+  --cor-footer: #f1c40f;
   --cor-fundo: #f9f9f9;
   --cor-texto: #333;
 }
 
 .dark {
-  --cor-primaria: #2ecc71;
-  --cor-secundaria: #9b59b6;
-  --cor-fundo: #333;
+  --cor-header: rgb(36, 36, 36);
+  --cor-footer: #9b59b6;
+  --cor-fundo: #1f242d;
   --cor-texto: #fff;
 }
 
@@ -31,61 +31,63 @@ body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   transition: background-color 0.5s, color 0.5s;
+  font-family: 'Red Hat Display', sans-serif; 
 }
 
 header {
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-header);
   color: var(--cor-texto);
 }
 
 footer {
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor-footer);
   color: var(--cor-texto);
 }
 
 #tema-button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
 }
   
 #tema-button i {
-    font-size: 18px;
-    margin-right: 10px;
+  font-size: 18px;
+  margin-right: 10px;
+  color: var(--cor-texto);
 }
 
 header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 9%;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    font-family: 'Red Hat Display', sans-serif; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: 'Red Hat Display', sans-serif; 
 
 }
 
 .logo{
-    font-size: 1.5rem;
-    color: #fff;
-    font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
 }
 
 nav a{
-    font-size: 1rem;
-    color: #fff;
-    font-weight: 500;
-    margin-left: 2.5rem;
-    transition: .5s;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 2.5rem;
+  transition: .5s;
 }
 
 nav a:hover {
-    color: #f8c844;
+  color: #f8c844;
 }
 
 .logo {
@@ -100,14 +102,14 @@ nav a:hover {
 }
 
 #menu-perfil {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #000000;
-    padding: 10px;
-    width: 20%;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--cor-fundo);
+  border: 1px solid #000000;
+  padding: 10px;
+  width: 20%;
 }
   
 .menu-perfil ul {
@@ -127,7 +129,7 @@ nav a:hover {
 
 .menu-perfil a {
   text-decoration: none;
-  color: #333;
+  color: var(--cor-texto);
 }
 
 .menu-perfil a:hover {
@@ -140,4 +142,89 @@ nav a:hover {
 
 #perfil-button i {
     pointer-events: none;
+}
+
+section{
+  width: 100%;
+  height: 100%;
+  padding: 10rem 9% 2rem;
+}
+
+.perfil-user-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+#img-perfil-container{
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+}
+
+#img-perfil{
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+#perfil-content{
+  margin-left: 100px;
+}
+
+#perfil-content p{
+  padding-top: 30px;
+  font-size: larger;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 30px;
+}
+
+#atividade-user .atividade-user-container h2{
+  font-size: 30px;
+  align-items: center;
+}
+
+#contato {
+  background-color: var(--cor-fundo);
+  transition: background-color 0.5s, color 0.5s;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#form-contato {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #f8c844;
+  color: var(--cor-texto);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
 }
